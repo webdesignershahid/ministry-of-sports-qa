@@ -1,0 +1,394 @@
+.media {
+    padding: 40px 0;
+    @include lg-devices {
+        padding: 60px 0;
+    }
+
+    .nav-tabs {
+        justify-content: center;
+        margin-bottom: 20px;
+        gap: 0 10px;
+        @include md-devices {
+            gap: 0;
+            flex-direction: column;
+            margin: 0;
+            position: sticky;
+            top: 20px;
+        }
+        .nav-item {
+            border: 1px solid rgba(#707070, 0.2);
+            padding: 10px;
+            width: 110px;
+            max-width: 180px;
+            border-radius: 8px;
+            background-color: $color__white;
+            & + .nav-item {
+                @include md-devices {
+                    margin-top: 10px;
+                }
+            }
+            @include md-devices {
+                width: 95px;
+                padding: 0;
+            }
+            @include lg-devices {
+                width: 140px;
+                padding: 10px;
+            }
+            @include xl-devices {
+                width: 150px;
+            }
+            @include xxl-devices {
+                width: 180px;
+            }
+        }
+        .nav-link {
+            border: 1px solid transparent;
+            padding: 10px 18px;
+            text-align: center;
+            font-size: 13px;
+            font-weight: 600;
+            color: #757575;
+            border-radius: 8px;
+            @include md-devices {
+                font-size: 15px;
+                padding: 16px 18px;
+            }
+            @include lg-devices {
+                font-size: 16px;
+            }
+            @include xl-devices {
+                font-size: 18px;
+            }
+            @include xxl-devices {
+                font-size: 20px;
+                padding: 20px 20px;
+            }
+            img {
+                display: block;
+                margin: 0 auto 10px;
+                width: 30px;
+                @include md-devices {
+                    width: 35px;
+                }
+                @include lg-devices {
+                    width: 40px;
+                }
+                @include xl-devices {
+                    width: 55px;
+                    margin: 0 auto 15px;
+                }
+            }
+
+            &.active {
+                border-color: $color__dark__red;
+                color: #bf9531;
+            }
+        }
+    }
+    .news {
+        .news-item {
+            max-width: 380px;
+            margin: 0 auto;
+
+            @include xl-devices {
+                max-width: 100%;
+            }
+            .figure {
+                margin: 0 0 10px;
+                overflow: hidden;
+                border-radius: 8px;
+
+                @include xl-devices {
+                    margin: 0 0 15px;
+                }
+                @include xxl-devices {
+                    margin: 0 0 20px;
+                }
+            }
+            .post-details {
+                .post-date {
+                    margin-bottom: 10px;
+                    color: #bf9531;    
+                }
+                .post-title {
+                    font-weight: 600;
+                    line-height: 1.5;
+                    font-size: 16px;
+                    margin: 0 0 20px 0;
+
+                    @include lg-devices {
+                        font-size: 18px;
+                        line-height: 1.8;
+                    }
+                    @include xl-devices {
+                        font-size: 20px;
+                        margin: 0 0 25px 0;
+                    }
+                    @include xxl-devices {
+                        margin: 0 0 30px 0;
+                        font-size: 22px;
+                    }
+                    a {
+                        color: #757575; 
+                        transition: all 0.3s ease;                   
+                    }
+                }
+                .details-link {
+                    a {
+                        display: inline-block;
+                        border: 1px solid #707070;
+                        color: #707070;
+                        padding: 5px 20px;
+                        border-radius: 7px;
+                        font-size: 15px;
+                        transition: all 0.3s ease;
+
+                        @include lg-devices {
+                            padding: 8px 30px;
+                        }
+                        &:hover {
+                            background-color: #707070;
+                            color: $color__white;
+                        }
+                    }
+                }
+            }
+            &:hover {
+                .post-details {
+                    .post-title {
+                        a {
+                            color: #bf9531;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .events {
+        .events-calander {
+            .evo-calendar {
+                box-shadow:  none;
+                border: 1px solid rgba(#707070, 0.2);
+
+            }
+            .calendar-year {
+                background-color: #cbcbcb;
+                padding: 10px 0;
+                p {
+                    color: #707070;
+                    font-size: 18px;
+                    font-weight: 600;
+                    @include xxl-devices {
+                        font-weight: 700;
+                        font-size: 20px;
+                    }
+                }
+                .icon-button {
+                    transform: scaleX(-1);
+
+                    span {
+                        border-color: #707070;
+                    }
+                }
+            }
+            #sidebarToggler {
+                background-color: transparent;
+                box-shadow: none;
+                padding: 0 5px;
+                height: 53px;
+                width: 40px;
+                transform: translate(0);
+    
+                .bars {
+                    height: 2px;
+                    &::before, &::after {
+                        height: 2px;
+                    }
+                    &::before {
+                        top: -10px;
+                    }
+                    &::after {
+                        bottom: -10px;
+                    }
+                }
+            }
+            .calendar-events,
+            #eventListToggler {
+                display: none;
+            }
+            .calendar-sidebar {
+                background-color: transparent;
+            }
+            .month-list {
+                background-color: #ebebeb;
+                li {
+                    color: $color__Black;
+                    font-family: sans-serif;
+                    font-size: 14px;
+                    &.active-month, &:hover {
+                        background-color: #cbcbcb;
+                    }
+                }
+            }
+            .calendar-inner {
+                max-width: 100%;
+                margin: 0;
+                padding: 70px 0 0px 0;
+
+                @include xsm-devices {
+                    padding: 70px 0px 10px 0px;
+                }
+        
+                .calendar-table {
+                    th[colspan="7"] {
+                        font-family: sans-serif;
+                        color: #707070;
+                        padding-bottom: 10px;
+                        font-size: 18px;
+        
+                        &::after {
+                            display: none;
+                        }
+                    }
+                    .calendar-header-day {
+                        font-family: sans-serif;
+                        font-size: 16px;
+                    }
+                }
+            }
+            .calendar-body {
+                .calendar-day {
+                    padding: 5px 0;
+        
+                    .day {
+                        height: 40px;
+                        width: 40px;
+                        border-radius: 0;
+                        @include xl-devices {
+                            height: 45px;
+                            width: 45px;
+                        }
+                        @include xxl-devices {
+                            height: 50px;
+                            width: 50px;
+                        }
+                        @include xxxl-devices {
+                            height: 55px;
+                            width: 55px;
+                        }
+                    }
+                    .event-indicator {
+                        transform: translate(-50%, -10px);
+                        .type-bullet {
+                            div {
+                                @include width-height(6px, 6px)
+                            }
+                        }
+                    }
+                }
+            }
+            .buttons {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 0px 15px;
+                margin: 20px 0px;
+
+                .btn {
+                    border: 1px solid rgba(#707070, 0.2);
+                    border-radius: 5px;
+                    padding: 8px 10px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: #707070;
+                    transition: all 0.3s;
+
+                    &:hover {
+                        border-color: $color__dark__red;
+                        color: $color__dark__red;
+                    }
+
+                    @include md-devices {
+                        padding: 10px 10px;
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
+                }
+            }
+            
+        }
+        .event-items-wrapper {
+            .events-item {
+                background-color: #ebebeb;
+                & + .events-item {
+                    margin-top: 15px;
+                }
+                .thumb {
+                    width: 100px;
+                    @include xs-devices {
+                        width: 120px;
+                    }
+                    @include md-devices {
+                        width: 170px;
+                    }
+                    @include lg-devices {
+                        width: 160px;
+                    }
+                }
+                .date {
+                    background-color: #cbcbcb;
+                    padding: 8px 10px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: #757575;
+                    @include xs-devices {
+                        font-size: 16px;
+                    }
+                    @include md-devices {
+                        font-size: 18px;
+                        padding: 10px 15px;
+                    }
+                    @include xxl-devices {
+                        font-size: 20px;
+                        padding: 12px 30px;
+                    }
+                }
+                .event-heading {
+                    padding: 8px 10px;
+                    font-size: 13px;
+                    line-height: 1.5;
+                    @include xs-devices {
+                        font-size: 15px;
+                    }
+                    @include md-devices {
+                        font-size: 18px;
+                        padding: 10px 15px;
+                    }
+                    @include xxl-devices {
+                        font-size: 20px;
+                        line-height: 2;
+                        padding: 15px 30px;
+                    }
+                    a {
+                        color: #707070;
+                    }
+                }
+            }
+        }
+        .all-events {
+            margin-top: 20px;
+            a {
+                display: inline-block;
+                border: 1px solid #707070;
+                color: #707070;
+                padding: 7px 30px;
+                border-radius: 7px;
+                transition: all 0.3s ease;
+                &:hover {
+                    background-color: #707070;
+                    color: $color__white;
+                }
+            }
+        }
+    }
+}

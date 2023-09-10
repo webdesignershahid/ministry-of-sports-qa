@@ -1,0 +1,152 @@
+footer {
+    .footer-top {
+        padding: 40px 0;
+
+        .widget {
+            margin-bottom: 20px;
+            @include lg-devices {
+                margin-bottom: 40px;
+            }
+            .widget-title {
+                margin-bottom: 15px;
+                font-weight: 600;
+                color: #707070;
+                @include xl-devices {
+                    font-size: 20px;
+                }
+            }
+            .subscribe-form {
+                .input-group {
+                    justify-content: center;
+                    @include sm-devices {
+                        justify-content: start;
+                    }
+                }
+                input {
+                    max-width: 280px;
+                    height: 50px;
+
+                    &:focus {
+                        box-shadow: none;
+                        border-color: #cbcbcb;
+                    }
+                }
+                button {
+                    background-color: #cbcbcb;
+                    border: 0;
+                    padding: 10px 25px;
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: #707070;
+                    transition: all 0.3s;
+
+                    &:hover {
+                        background-color: $color__dark__red;
+                        color: $color__white;
+                    }
+                }
+            }
+            .register-cta {
+                a {
+                    display: inline-block;
+                    border: 1px solid $color__dark__red;
+                    background-color: #cbcbcb;
+                    padding: 10px 40px;
+                    font-size: 14px;
+                    color: $color__dark__red;
+                    font-weight: 700;
+                    border-radius: 7px;
+                    max-width: 380px;
+                    @include xl-devices {
+                        display: block;
+                        padding: 15px 60px;
+                        // font-size: 18px;
+                        font-size: 16px;
+
+                    }
+                }
+            }
+            p {
+                font-size: 18px;
+                font-weight: 600;
+                color: #707070;
+                color: #bf9531;
+            }
+            &.social-media {
+                a {
+                    @include width-height(40px, 40px);
+                    border: 1px solid #707070;
+                    border-radius: 50%;
+                    @include flex-center;
+                    font-size: 20px;
+                    color: #707070;
+                }
+            }
+            &.our-apps {
+                a {
+                    @include width-height(40px, 40px);
+                    @include flex-center;
+                    font-size: 20px;
+                    color: #707070;
+                }
+            }
+            &.widget-title, &.total-visitors, &.last-update, &.our-apps, &.social-media, .register-cta {
+                text-align: center;
+                @include sm-devices {
+                    text-align: start
+                }
+            }
+             
+            &:last-child {
+                @include xl-devices {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .logos {
+            text-align: center;
+            @include sm-devices {
+                text-align: start
+            }
+            @media (min-width: 992px) and (max-width: 1199px) {
+                @include flex-center;
+                gap: 0 20px;
+            }
+            @include xl-devices {
+                text-align: center;
+            }
+            .partner {
+                @media (min-width: 992px) and (max-width: 1199px) {
+                    border-left: 1px solid #000;
+                    padding-left: 1.5rem;                    
+                }
+                li + li {
+                    border-right: 1px solid #000;
+                    padding-right: 1.5rem;
+                }
+                img {
+                    width: 100px;
+                }
+            }
+            .gcc-img {
+                img {
+                    width: 200px;
+                }
+            }
+        }
+    }
+    .footer-bottom {
+        background-color: #707070;
+        padding: 10px 0;
+
+        text-align: center;
+
+        @include lg-devices {
+            text-align: start;
+        }
+
+        p {
+            color: $color__white;
+        }
+    }
+}

@@ -1,0 +1,244 @@
+.about-announcement {
+    padding: 40px 0;
+    
+    @include lg-devices {
+        padding: 60px 0;
+    }
+
+    .announcement {
+        background-color: #e1e1e1;
+        position: relative;
+        z-index: 1;
+        margin: 0 0 20px;
+        @include sm-devices {
+            padding: 45px 45px 45px 140px;
+        }
+        @include md-devices {
+            max-width: 520px;
+            margin: 0 auto 20px;
+        }
+        @include lg-devices {
+            padding: 45px 30px 45px 40px;
+        }
+        @include xl-devices {
+            padding: 65px 40px 55px 120px;
+        }
+        .date {
+            background-color: #bf9531;
+            padding: 15px 40px;
+            text-align: center;
+            color: $color__white;
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            @include sm-devices {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            @include md-devices {
+                font-size: 20px;
+            }
+            @include xl-devices {
+                padding: 20px 40px;
+                font-size: 22px;
+            }
+            @include xxl-devices {
+                font-size: 24px;
+            }
+            strong {
+                font-size: 24px;
+                line-height: 1;
+                @include md-devices {
+                    font-size: 26px;
+                }
+                @include xl-devices {
+                    font-size: 30px;
+                }
+            }
+            span {
+                @include sm-devices {
+                    display: block;
+                }
+            }
+        }
+        .speaker {
+            position: absolute;
+            left: 20px;
+            bottom: 40px;
+            user-select: none;
+            pointer-events: none;
+            display: none;
+            width: 75px;
+            @include sm-devices {
+                display: block;
+            }
+            @include lg-devices {
+                display: none;
+            }
+            @include xl-devices {
+                display: block;
+            }
+            @include xxl-devices {
+                bottom: 65px;
+                width: 85px;
+            }
+        }
+        .title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #707070;
+            padding: 0 20px;
+
+            @include sm-devices {
+                padding: 0;
+            }
+            @include md-devices {
+                font-size: 24px;
+                margin-bottom: 15px;
+            }
+            @include xl-devices {
+                margin-bottom: 20px;
+            }
+            @include xxl-devices {
+                font-size: 26px;
+                margin-bottom: 30px;
+            }
+        }
+        p {
+            line-height: 2;
+            color: #707070;
+            font-size: 16px;
+            padding: 0 20px;
+
+            @include sm-devices {
+                padding: 0;                
+            }
+            @include md-devices {
+                font-size: 18px;
+            }
+            @include xxl-devices {
+                font-size: 20px;
+            }
+
+            strong {
+                font-family: sans-serif;
+                margin: 5px 0;
+                display: block;
+                a {
+                    color: $color__dark__red;
+
+                }
+            }
+        }
+        ul {
+            background-color: #707070;
+            padding: 12px 30px;
+            margin-top: 15px;
+            text-align: center;
+            @include xl-devices {
+                margin-top: 30px;
+                display: inline-block;
+            }
+            li {
+                & + li {
+                    margin-right: 20px;
+                }
+                a {
+                    color: $color__white;
+                    font-family: sans-serif;
+                }
+                img {
+                    filter: brightness(0) invert(1);
+                }
+            }
+        }
+    }
+
+    .about-us {
+        padding: 30px 0 0;
+        @include xsm-devices {
+            padding: 30px 15px 0;
+        }
+        @include lg-devices {
+            padding: 0;
+        }
+        @include xl-devices {
+            padding: 0 30px 0 0;
+        }
+        @include xxl-devices {
+            padding: 0 40px 0 0;
+        }
+        @include xxxl-devices {
+            padding: 0 60px 0 0;
+        }
+        .title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #707070; 
+            text-align: center;
+            @include sm-devices {
+                font-size: 22px;
+            }
+            @include md-devices {
+                font-size: 24px;
+            }
+            @include lg-devices {
+                text-align: start;
+            }
+            @include xl-devices {
+                margin-bottom: 30px;
+            }
+            @include xxl-devices {
+                font-size: 26px;
+            }
+        }
+        p {
+            font-size: 15px;
+            line-height: 1.7;
+            text-align: justify;
+            color: #707070;
+            @include sm-devices {
+                font-size: 16px;
+                line-height: 1.8;
+            }
+            @include md-devices {
+                font-size: 18px;
+                line-height: 2;
+            }
+            @include lg-devices {
+                text-align: start;
+                font-size: 17px;
+            }
+            @include xxl-devices {
+                font-size: 18px;
+
+            }
+        }
+
+        .btn-readmore {
+            display: inline-block;
+            border: 1px solid #707070;
+            padding: 5px 30px;
+            border-radius: 7px;
+            transition: all 0.3s ease;
+            @include sm-devices {
+                padding: 8px 30px;
+            }
+            @include lg-devices {
+                font-size: 16px;
+            }
+            @include xxl-devices {
+                margin-top: 15px;
+            }
+
+            &:hover {
+                background-color: #707070;
+                color: $color__white;
+            }
+        }
+    }
+
+}

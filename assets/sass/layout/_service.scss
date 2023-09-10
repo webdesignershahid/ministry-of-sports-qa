@@ -1,0 +1,96 @@
+.services {
+    .service-carousel {
+        .owl-stage-outer {
+            padding: 0 5px;
+            margin: 0 -5px;
+        }
+        .service-item {
+            padding: 25px 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 3px 3px rgba(#757575, 0.1);
+            margin: 5px auto;
+            background-color: $color__white;
+            transition: all 0.3s;
+            border: 1px solid transparent;
+            text-align: center;
+            max-width: 360px;
+
+            @include md-devices {
+                padding: 40px 35px;
+            }
+            @include xl-devices {
+                text-align: start;
+            }
+            @include xxl-devices {
+                padding: 40px 50px;
+            }
+            .icon {
+                margin-bottom: 20px;
+                @include xl-devices {
+                    margin-bottom: 25px;
+                }
+                @include xxl-devices {
+                    margin-bottom: 30px;
+                }
+
+                img {
+                    width: 50px;
+                    margin: 0 auto;
+                    @include md-devices {
+                        width: 65px;
+                    }
+                    @include xl-devices {
+                        width: 70px;
+                        margin: 0;
+                    }
+                }
+            }
+            .service-title {
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 18px;
+
+                @include sm-devices {
+                    font-size: 18px;
+                    line-height: 1.5;
+                }
+                @include md-devices {
+                    font-size: 20px;
+                }
+                @include xl-devices {
+                    margin-bottom: 25px;
+                }
+                @include xxl-devices {
+                    margin-bottom: 30px;
+                    font-size: 24px;
+                }
+                a {
+                    color: #757575;
+                }
+            }
+            .details {
+                a {
+                    display: inline-block;
+                    border: 1px solid #707070;
+                    padding: 5px 20px;
+                    color: #707070;
+                    border-radius: 8px;
+                    font-size: 15px;
+                    transition: all 0.3s ease;
+
+                    @include md-devices {
+                        padding: 8px 30px;
+                        font-size: 16px;
+                    }
+                    &:hover {
+                        background-color: #707070;
+                        color: $color__white;
+                    }
+                }
+            }
+            &:hover {
+                border-color: #bf9531;
+            }
+        }
+    }
+}

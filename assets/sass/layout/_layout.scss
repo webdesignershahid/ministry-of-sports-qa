@@ -1,0 +1,15 @@
+.container {
+    @include xl-devices {
+        max-width: 1260px;
+    }
+    @include xxl-devices {
+        max-width: 1560px;
+    }
+}
+
+@import 'hero';
+@import 'service';
+@import 'about-announcement';
+@import 'centers-clubs';
+@import 'media';
+@import 'review-cta';

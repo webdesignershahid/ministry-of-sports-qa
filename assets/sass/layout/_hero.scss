@@ -1,0 +1,78 @@
+.hero-carousel {
+    margin-bottom: 40px;
+    .slider-item {
+        height: 400px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        @include xsm-devices {
+            height: 450px;
+        }
+        @include lg-devices {
+            height: 550px;
+        }
+        @include xxl-devices {
+            height: 680px;
+            background-size: contain;
+        }
+        @include xxl-devices {
+            height: 780px;
+        }
+
+        .container {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            .text-content {
+                background-color: rgba($color__white, 0.8);
+                display: inline-block;
+                padding: 10px 20px;
+                margin: auto 0 130px;
+                max-width: 480px;
+
+                @include xsm-devices {
+                    padding: 15px 25px;
+                    margin: auto 0 100px;
+                }
+                @include sm-devices {
+                    padding: 20px 30px;
+                }
+                @include lg-devices {
+                    max-width: 580px;
+                    padding: 25px 30px;
+                }
+                @include xxl-devices {
+                    margin: auto 0 150px;
+                }
+               
+
+                h3 {
+                    color: #bf9531;
+                    font-weight: 700;
+                    font-size: 18px;
+                    margin-bottom: 8px;
+                    @include xsm-devices {
+                        font-size: 20px;
+                    }
+                    @include sm-devices {
+                        font-size: 24px;
+                    }
+                    @include xxl-devices {
+                        font-size: 28px;
+                    }
+                }
+                p {
+                    color: #757575;
+                    font-weight: 500;
+                    font-size: 15px;
+                    @include xsm-devices {
+                        font-size: 17px;
+                    }
+                    @include sm-devices {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

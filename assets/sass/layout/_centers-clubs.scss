@@ -1,0 +1,53 @@
+.centers-club {
+    background-color: rgba(#e1e1e1, 0.7);
+    padding: 40px 0;
+    @include lg-devices {
+        padding: 60px 0;
+    }
+
+    .nav-tabs {
+        margin-bottom: 40px;
+        @include md-devices {
+            margin-bottom: 50px;
+        }
+        @include xxl-devices {
+            margin-bottom: 60px;
+        }
+        .nav-item {
+            & + .nav-item {
+                margin-right: 10px;
+                @include md-devices {
+                    margin-right: 30px;
+                }
+                @include lg-devices {
+                    margin-right: 50px;
+                }
+            }
+        }
+        .nav-link {
+            background-color: $color__white;
+            border: 0;
+            color: #707070;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 2px 2px rgba(#707070, 0.1);
+            
+            @include md-devices {
+                font-size: 16px;
+                padding: 15px 30px;
+            }
+            
+            @include xxl-devices {
+                box-shadow: 0 0 4px 4px rgba(#707070, 0.1);
+                padding: 15px 40px;
+                font-weight: 600;
+            }
+
+            &.active {
+              color: $color__dark__red;
+            }
+        }
+    }
+}
